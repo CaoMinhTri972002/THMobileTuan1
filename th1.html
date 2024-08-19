@@ -15,16 +15,18 @@
         var JohnHeigh = 1.95;
 
         markBMI = MarkWeight/(MarkHeigh*MarkHeigh);
-        johnBMI = (JonhWeight/JohnHeigh*JohnHeigh);
+        johnBMI = JonhWeight/(JohnHeigh*JohnHeigh);
 
-        var tinhJohnBMI = function (MarkWeight,MarkHeigh){
-                 return () =>{
-                    console.log(markBMI.toFixed(2));
-                 }
-        } 
-        
-        console.log('MarkBMI:');
-            tinhJohnBMI(MarkWeight,MarkHeigh)();
+        console.log('MarkBMI:'+ markBMI);
+        console.log('JohnBMI:' + johnBMI);  
+
+        if (markBMI> johnBMI){
+            console.log('mark BMI '+ markBMI + ' is heigher than john BMI:'+ johnBMI);
+        }else if(markBMI < johnBMI){
+            console.log('mark BMI is lower than john BMI');
+        }else  {
+            console.log('mark BMI is as well as than john BMI');
+        }
     </script>
     
 </body>
